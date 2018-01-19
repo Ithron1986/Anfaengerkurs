@@ -5,27 +5,30 @@ public class User {
     private String vorname;
     private String nachname;
     private String email;
+    private String passwort;
     private int geburtsjahr;
 
 
-    public User(String email, int geburtsjahr) {
+    public User(String email, int geburtsjahr, String passwort) {
         this.setEmail(email);
         this.setGeburtsjahr(geburtsjahr);
+        this.setPasswort(passwort);
 
     }
 
-    public User(String email, int geburtsjahr, String vorname, String nachname) {
-        this(email, geburtsjahr);
+    public User(String email, int geburtsjahr, String passwort, String vorname, String nachname) {
+        this(email, geburtsjahr, passwort);
         this.setVorname(vorname);
         this.setNachname(nachname);
     }
 
-    public String getVorname() {
-        return this.vorname;
-    }
 
     public void setVorname(String newVorname) {
         this.vorname = newVorname;
+    }
+
+    public String getVorname() {
+        return this.vorname;
     }
 
     public void setNachname(String newNachname) {
@@ -34,6 +37,14 @@ public class User {
 
     public String getNachname() {
         return this.nachname;
+    }
+
+    public void setPasswort(String newPasswort) {
+        this.passwort = newPasswort;
+    }
+
+    public String getPasswort() {
+        return this.passwort;
     }
 
     public String getEmail() {
